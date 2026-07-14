@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <title>Efe Şahinbaş | Cyber Security Researcher</title>
+  <style>
+    .interactive-keyword {
+      color: #a855f7;
+      font-weight: bold;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dashed #a855f7;
+      z-index: 10;
+    }
+    .interactive-keyword .tooltip-box {
+      visibility: hidden;
+      opacity: 0;
+      width: max-content;
+      max-width: 300px;
+      background-color: #1c1f22;
+      color: #fff;
+      text-align: left;
+      border-radius: 6px;
+      padding: 10px;
+      position: absolute;
+      z-index: 9999;
+      bottom: calc(100% + 10px);
+      left: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+      box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+      border: 1px solid #a855f7;
+      font-family: inherit;
+      font-size: 14px;
+      pointer-events: none;
+      white-space: normal;
+    }
+    .interactive-keyword .tooltip-box::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 15px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #a855f7 transparent transparent transparent;
+    }
+    .interactive-keyword.active .tooltip-box {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .tooltip-box a {
+      color: #a855f7;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+      padding: 5px;
+      transition: background 0.2s, color 0.2s;
+      border-radius: 3px;
+      font-weight: normal;
+    }
+    .tooltip-box a:hover {
+      background: rgba(168, 85, 247, 0.2);
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body class="js-header-main">
+  <main class="main">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__burger"><span> </span></div>
+        <div class="header__menu"><a class="header__menu-logo" href="index.html">MacallanTheRoot</a>
+          <div class="header__menu-exit"></div>
+          <div class="header__menu-content">
+            <ul class="header__menu-list" id="myMenu">
+              <li class="header__menu-item" data-menuanchor="home" data-anchor=".section_home"><a
+                  class="header__menu-link" href="#home">Home</a></li>
+              <li class="header__menu-item" data-menuanchor="about" data-anchor=".section__about"><a
+                  class="header__menu-link" href="#about">About</a></li>
+              <li class="header__menu-item" data-menuanchor="experience" data-anchor=".section__experience"><a
+                  class="header__menu-link" href="#experience">Experience</a></li>
+              <li class="header__menu-item" data-menuanchor="services" data-anchor=".section__services"><a
+                  class="header__menu-link" href="#services">Services</a></li>
+              <li class="header__menu-item" data-menuanchor="recognition" data-anchor=".section__recognition"><a
+                  class="header__menu-link" href="#recognition">Recognition</a></li>
+              <li class="header__menu-item" data-menuanchor="blog" data-anchor=".section__blog"><a
+                  class="header__menu-link" href="#blog">Blog</a></li>
+              <li class="header__menu-item" data-menuanchor="contacts" data-anchor=".section__contacts"><a
+                  class="header__menu-link" href="#contacts">Contacts </a></li>
+            </ul>
+          </div>
+        </div>
+        <ul class="header__links">
+          <li><a href="#blog">Articles</a></li>
+          <li><a href="#contacts">Contacts</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="wrapper" id="preloader">
+      <div class="main-circle">
+        <div class="green-circle">
+          <div class="brown-circle"></div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-widget__wrapper">
+      <div class="nav-widget">
+        <div class="nav-widget__line">
+          <div class="nav-widget__line-active progress-line-js"></div>
+        </div>
+        <div class="nav-widget__page-number js-page-number">1/8</div>
+      </div>
+    </div>
+    <div id="pagepiling">
+      <div class="section section_home pp-scrollable">
+        <div class="home js-section" id="home">
+          <div class="home-container"><img class="home-image home-image--desktop home__image js-img-home"
+              src="assets/images/main/home/king.webp" alt="Author's photo"><img
+              class="home-image home-image--mobile home__image js-img-home-adapt" src="assets/images/main/home/king.webp"
+              alt="Author's photo">
+            <div class="home-container__info home-author">
+              <div class="home-ticker js-ticker">
+                <div class="home-ticker__wrapper">
+                  <div class="typed-strings" style="display: none;">
+                    <p>a Purple Teamer</p>
+                    <p>a Full-Stack Developer</p>
+                    <p>a Security Researcher</p>
+                    <p>an OSINT Analyst</p>
+                  </div>
+                  <p class="neue neue-headline2 home-ticker__text typed" style="color:purple"></p>
+                </div>
+              </div>
+              <h1 class="neue neue-headline1 home-author__name js-author-home">I’m EFE ŞAHİNBAŞ</h1>
+              <p class="manrope manrope-text2 home-author__description">I specialize in Offensive Security, Full-Stack Development, and Digital Intelligence.</p><a class="home-author__button home-button"
+                href="https://www.linkedin.com/in/efe-sahinbas/">
+                <div class="home-button__item"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section__about pp-scrollable">
+        <div class="section-main about js-section" id="about">
+          <div class="container-main about__container">
+            <div class="about__row">
+              <div class="about__title neue-headline2-green">CODE & SECURITY</div>
+              <div class="about__work-info neue-headline3">My journey started with a curiosity for how systems break.
+                Based in Turkey.</div>
+              <div class="about__img-wrapper"><img class="about__img" src="assets/images/main/about/img1.webp" alt="img">
+              </div>
+              <div class="about__skills">
+                <div class="about__skill-title about__skill-title-one">
+                  <div class="neue-headline2 about__skill-counter">6</div><span
+                    class="neue-text2 about__skill-name">years<br />experience</span>
+                </div>
+                <div class="about__skill-title about__skill-title-two">
+                  <div class="neue-headline2 about__skill-counter">24</div><span
+                    class="neue-text2 about__skill-name">open source<br /> tools</span>
+                </div>
+                <div class="about__skill-desc about__skill-desc-one manrope-text2">My journey is built on a hybrid
+                  foundation of Full-Stack Development and Cybersecurity. My capabilities have been nationally recognized: I ranked Top 10 in Turkey at the 
+                  <span class="interactive-keyword">Siber Vatan<div class="tooltip-box">
+                    <a href="https://www.karsmanset.com/haber/siber-vatan-takimi-turkiyede-ilk-10a-girdi-1728183.htm" target="_blank">📰 Kars Manset News</a>
+                    <a href="https://www.karshakimiyet.com/serhatin-uc-beyleri-siber-vatan-turkiye-finalinde-ilk-10a-girdi-109788h.htm" target="_blank">📰 Kars Hakimiyet News</a>
+                    <a href="https://www.linkedin.com/posts/efe-sahinbas_sibervatan-sibergaesvenlik-cybersecurity-activity-7476413336319016960-ewc8" target="_blank">🔗 LinkedIn Post (Top 10 TR)</a>
+                    <a href="https://www.linkedin.com/posts/efe-sahinbas_t%C3%BCrkiye-siber-vatan-program%C4%B1-yar%C4%B1final-activity-7463607775584223232-CP_O" target="_blank">🔗 LinkedIn Post (1st Place SERKA)</a>
+                  </div></span> CTF Finals and managed an AI-based Student Tracking System funded by 
+                  <span class="interactive-keyword">TÜBİTAK<div class="tooltip-box">
+                    <a href="https://www.linkedin.com/posts/efe-sahinbas_taesbiaovtak-taesbiaovtak2209a-yapayzeka-activity-7460414637579231232-D4sb" target="_blank">🔗 LinkedIn Post</a>
+                  </div></span>. Additionally, I am a core member of the TanıAI team for 
+                  <span class="interactive-keyword">TEKNOFEST<div class="tooltip-box">
+                    <a href="https://www.linkedin.com/posts/umit-cifci_teknofest2026-tanaftai-saafblaftktayapayzeka-activity-7460042763682795521-w1Yc" target="_blank">🔗 LinkedIn Post</a>
+                  </div></span> Healthcare AI competitions.</div>
+                <div class="about__skill-desc about__skill-desc-two manrope-text2">My technical approach combines
+                  offensive mindsets with defensive strategies. Beyond code, my work in the English Drama Club led to the award-winning 
+                  <span class="interactive-keyword">AİÇÜ Documentary<div class="tooltip-box">
+                    <a href="https://www.agri.edu.tr/detail.aspx?id=52108&bid=256&tid=13" target="_blank">📰 Agri Edu News</a>
+                    <a href="https://www.karakosehaber.com/aicu-de-ogrenci-projesine-anlamli-odul-ve-tesekkur/227060/" target="_blank">📰 KaraKose News</a>
+                    <a href="https://www.linkedin.com/posts/efe-sahinbas_englishdramaclub-theatre-documentary-activity-7443560027271090176-RFG-" target="_blank">🔗 LinkedIn Post</a>
+                  </div></span> project, earning an Honorable Mention from the İbrahim Çeçen Foundation. I turn raw vulnerabilities into fortified strengths.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section__experience pp-scrollable">
+        <div class="section-main experience js-section" id="experience">
+          <div class="container-main experience__container">
+            <div class="experience__title neue-headline2-green">experience</div>
+            <div class="experience__row">
+              <div class="experience__resume">
+                <div class="experience__resume-text manrope-text2">My career path is fueled by a dual passion: the drive
+                  to build and the imperative to secure. My journey spans the entire digital spectrum—from the
+                  high-pressure agility of founding a startup to the critical stability of managing university IT
+                  infrastructures. I possess a unique vantage point: I write code with the foresight of a developer and
+                  break it with the mindset of a hacker. I don’t just maintain systems; I engineer their evolution,
+                  optimizing every layer to be computationally faster, operationally smarter, and logically unbreakable.
+                  Whether I am automating adversary simulations to expose hidden cracks or mining intelligence from the
+                  deep web to forecast trends, my goal remains constant: to transform raw complexity into streamlined,
+                  secure power.</div><a class="experience__resume-button button-primary"
+                  href="HamzaEfeSahinbasCv.pdf" download="HamzaEfeSahinbasCv.pdf"><span>Download resume</span><img
+                    src="assets/images/main/arrow.svg" alt="img"></a>
+              </div>
+              <div class="experience__history"><a class="experience__card active" href="#">
+                  <div class="experience__card-top">
+                    <div class="experience__position neue-headline3">Founder & Full-Stack Developer</div>
+                    <div class="experience__company neue-text1">Chase Web Services</div>
+                  </div>
+                  <div class="experience__date manrope-text2">2020 - 2024</div>
+                </a><a class="experience__card active" href="#">
+                  <div class="experience__card-top">
+                    <div class="experience__position neue-headline3">IT Support Specialist </div>
+                    <div class="experience__company neue-text1">Agri Ibrahim Cecen Uni.</div>
+                  </div>
+                  <div class="experience__date manrope-text2">2022 - 2023</div>
+                </a><a class="experience__card active" href="#">
+                  <div class="experience__card-top">
+                    <div class="experience__position neue-headline3">Jr. Front-End Developer</div>
+                    <div class="experience__company neue-text1">Makbil</div>
+                  </div>
+                  <div class="experience__date manrope-text2">2022 - 2023</div>
+                </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section__services pp-scrollable">
+        <div class="section-main services js-section" id="services">
+          <div class="container-main services__container">
+            <div class="services__row">
+              <div class="services__column">
+                <div class="services__card js-services-item">
+                  <div class="services__card-title js-services-control" data-control="1"><span
+                      class="manrope-text2 services__card-number">01</span>
+                    <div class="neue-headline1 services__card-name">OFFENSIVE SECURITY</div>
+                  </div>
+                  <div class="services__tab js-services-content" data-item="1">
+                    <div class="services__tab-img-wrapper"> <img class="services__tab-img"
+                        src="assets/images/main/services/image1-akk.webp" alt="img"></div>
+                    <div class="services__tab-desc manrope-text2">I simulate advanced cyber threats to test your
+                      defenses before real attackers do. Using custom automated toolkits and adversary emulation
+                      strategies, I uncover critical vulnerabilities and provide a roadmap to fix them. It's not just
+                      about breaking in; it's about showing you where the cracks are.</div>
+                  </div>
+                </div>
+                <div class="services__card js-services-item">
+                  <div class="services__card-title js-services-control" data-control="2"><span
+                      class="manrope-text2 services__card-number">02</span>
+                    <div class="neue-headline1 services__card-name">DEFENSIVE STRATEGY</div>
+                  </div>
+                  <div class="services__tab js-services-content" data-item="2">
+                    <div class="services__tab-img-wrapper"> <img class="services__tab-img"
+                        src="assets/images/main/services/image2-akk.webp" alt="img"></div>
+                    <div class="services__tab-desc manrope-text2">Security isn't just about walls; it's about
+                      visibility. I build automated incident response systems and hardening scripts that minimize
+                      reaction time. My approach focuses on proactive threat hunting and creating resilient
+                      infrastructures that can withstand modern cyber attacks.</div>
+                  </div>
+                </div>
+                <div class="services__card js-services-item">
+                  <div class="services__card-title js-services-control" data-control="3"><span
+                      class="manrope-text2 services__card-number">03</span>
+                    <div class="neue-headline1 services__card-name">FULL-STACK DEV</div>
+                  </div>
+                  <div class="services__tab js-services-content" data-item="3">
+                    <div class="services__tab-img-wrapper"> <img class="services__tab-img"
+                        src="assets/images/main/services/image3-akk.webp" alt="img"></div>
+                    <div class="services__tab-desc manrope-text2">I bridge the gap between secure architecture and user
+                      experience. From high-performance backend systems (Python, C#) to responsive frontend interfaces
+                      (Flutter, JS), I architect scalable solutions. I don't just write code; I build secure ecosystems
+                      that solve real-world problems.</div>
+                  </div>
+                </div>
+                <div class="services__card js-services-item">
+                  <div class="services__card-title js-services-control" data-control="4"><span
+                      class="manrope-text2 services__card-number">04</span>
+                    <div class="neue-headline1 services__card-name">OSINT & DATA MINING</div>
+                  </div>
+                  <div class="services__tab js-services-content" data-item="4">
+                    <div class="services__tab-img-wrapper"> <img class="services__tab-img"
+                        src="assets/images/main/services/image4-akk.webp" alt="img"></div>
+                    <div class="services__tab-desc manrope-text2">Information is power. I develop high-speed scraping
+                      bots and intelligence engines that mine scattered digital footprints from the deep web. I
+                      transform raw, chaotic data into actionable business intelligence, bypassing anti-bot measures to
+                      get the insights you need.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="services__tabs js-services-tabs"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section__recognition pp-scrollable">
+        <div class="section-main recognition js-section" id="recognition">
+          <div class="container-main recognition__container">
+            <div class="recognition__row">
+              <div class="recognition__title neue-headline2-green">certifications</div>
+              <div class="recognition__inner">
+                <div class="recognition__img-wrapper">
+                  <picture class="recognition__img">
+                    <source class="recognition__img" srcset="assets/images/main/recognition/img1.webp"
+                      media="(min-width:767px)"><img class="recognition__img"
+                      src="assets/images/main/recognition/img1-adapt.webp" alt="img">
+                  </picture>
+                </div>
+                <div class="recognition__resource">
+                  <ul class="recognition__resource-list manrope-text2">
+                    <li class="recognition__resource-list-title neue-headline3"><span>Hacker Rank</span></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/problem_solving_intermediate certificate.pdf" target="_blank">Problem Solving (Intermediate)</a></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/sql_basic certificate.pdf" target="_blank">SQL (Basic)</a></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/c_sharp_basic certificate.pdf" target="_blank">C# (Basic)</a></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/css certificate.pdf" target="_blank">CSS (Basic)</a></li>
+                  </ul>
+                  <ul class="recognition__resource-list manrope-text2">
+                    <li class="recognition__resource-list-title neue-headline3"><span>BTK Academy</span></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/Nesnelerin_İnterneti_(IoT)_ve_Güvenliği_Sertifika.pdf" target="_blank">IoT & Security</a></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/Bilişim_Hukuku_Sertifika.pdf" target="_blank">IT Law & Ethics</a></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/Temel_Ağ_Teknolojileri_Sertifika.pdf" target="_blank">Network Technologies</a></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/pythonsertifika.pdf" target="_blank">Python Developer</a></li>
+                  </ul>
+                  <ul class="recognition__resource-list manrope-text2">
+                    <li class="recognition__resource-list-title neue-headline3"><span>Industry & Business</span></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/skillfront_ISO-27001_2022-ISA.pdf" target="_blank">ISO 27001 InfoSec Associate</a></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/Ethical_Hacker_certificate_hamzaefesahinbas-yahoo-com_76fdd1eb-285a-45cc-a896-9bc154f43b9b.pdf" target="_blank">Ethical Hacker (Cisco)</a></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/Siber-Güvenlik-101.pdf" target="_blank">Cybersecurity 101 (Akbank)</a></li>
+                    <li class="recognition__resource-list-item"><a href="assets/certificates/Finans ve Ekonomi 101.pdf" target="_blank">Finance & Economy 101</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="recognition__contact-me">
+                <div class="recognition__contact-text manrope-text2">In the rapidly evolving landscape of cybersecurity,
+                  stagnation is a vulnerability. My expertise is not just claimed but validated by industry standards.
+                  From algorithmic problem solving to government-backed technical training, I constantly upgrade my
+                  arsenal to stay ahead of threats.</div><a href="#contacts"
+                  class="recognition__contact-button button-primary"><span>contact me</span><img
+                    src="assets/images/main/arrow.svg" alt="img"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section__blog pp-scrollable">
+        <div class="section-main blog js-section" id="blog">
+          <div class="container-main blog__container">
+            <div class="blog__row">
+              <div class="blog__title neue-headline2-green">Articles</div>
+              <div class="swiper-container2 blog__swiper-container">
+                <div class="swiper-wrapper blog__swiper-wrapper">
+                  <div class="swiper-slide blog__swiper-slide blog__swiper-slide-xl"> <a
+                      class="blog__card blog__card-md" href="./htmls/project-red-team.html"><img class="blog__card-img"
+                        src="assets/images/blog/red-team-main.webp" alt="img">
+                      <div class="blog__card-title neue-headline3">Automating Adversary Emulation: Red Team Toolkit
+                      </div>
+                    </a></div>
+                  <div class="swiper-slide blog__swiper-slide blog__swiper-slide-sm"> <a
+                      class="blog__card blog__card-sm" href="./htmls/project-blue-team.html"><img class="blog__card-img"
+                        src="assets/images/blog/blue-team-main.webp" alt="img">
+                      <div class="blog__card-date neue-text2">Defensive Strategy</div>
+                      <div class="blog__card-title neue-text1">From Reaction to Prevention: Blue Team Automation</div>
+                    </a></div>
+                  <div class="swiper-slide blog__swiper-slide blog__swiper-slide-sm"> <a
+                      class="blog__card blog__card-sm" href="./htmls/project-osint.html"><img class="blog__card-img"
+                        src="assets/images/blog/osint-main.webp" alt="img">
+                      <div class="blog__card-date neue-text2">Intelligence Gathering</div>
+                      <div class="blog__card-title neue-text1">Uncovering Digital Footprints: The OSINT Engine</div>
+                    </a></div>
+                  <div class="swiper-slide blog__swiper-slide blog__swiper-slide-sm"> <a
+                      class="blog__card blog__card-sm" href="./htmls/project-scraping.html"><img class="blog__card-img"
+                        src="assets/images/blog/scraping-main.webp" alt="img">
+                      <div class="blog__card-date neue-text2">Big Data Mining</div>
+                      <div class="blog__card-title neue-text1">Bypassing Anti-Bot Measures in Big Data Mining</div>
+                    </a></div>
+                  <div class="swiper-slide blog__swiper-slide blog__swiper-slide-sm"> <a
+                      class="blog__card blog__card-sm" href="./htmls/project-dayi-stego.html"><img class="blog__card-img"
+                        src="assets/images/blog/dayi.webp" alt="img">
+                      <div class="blog__card-date neue-text2">Steganography</div>
+                      <div class="blog__card-title neue-text1">Dayı Stego Solver: Concurrent Flag Discovery</div>
+                    </a></div>
+                  <div class="swiper-slide blog__swiper-slide blog__swiper-slide-sm"> <a
+                      class="blog__card blog__card-sm" href="./htmls/project-ctfshitcli.html"><img class="blog__card-img"
+                        src="assets/images/blog/ctfshitcli.webp" alt="img">
+                      <div class="blog__card-date neue-text2">CTF Management</div>
+                      <div class="blog__card-title neue-text1">CSC - CtfShitCli: The Ultimate Swiss Army Knife</div>
+                    </a></div>
+                  <div class="swiper-slide blog__swiper-slide blog__swiper-slide-sm"> <a
+                      class="blog__card blog__card-sm" href="./htmls/project-web-extensions.html"><img class="blog__card-img"
+                        src="assets/images/blog/webexplode.webp" alt="img">
+                      <div class="blog__card-date neue-text2">Browser Extensions</div>
+                      <div class="blog__card-title neue-text1">Web Grenade &amp; Explode: Client-Side Exploitation</div>
+                    </a></div>
+                  <div class="swiper-slide blog__swiper-slide blog__swiper-slide-sm"> <a
+                      class="blog__card blog__card-sm" href="./htmls/project-hayalet.html"><img class="blog__card-img"
+                        src="assets/images/blog/blue-team-main.webp" alt="img">
+                      <div class="blog__card-date neue-text2">Enterprise Security</div>
+                      <div class="blog__card-title neue-text1">Hayalet-Enterprise: Corporate Sentinel System</div>
+                    </a></div>
+                </div>
+              </div>
+              <div class="swiper-button-wrapper">
+                <div class="swiper-button-prev2 blog__swiper-button-prev"><svg width="50" height="50"
+                    viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="24.5" stroke="#787A7C" />
+                    <path d="M29 18L21 25L29 32" stroke="#787A7C" />
+                  </svg>
+                </div>
+                <div class="swiper-button-next2 blog__swiper-button-next"><svg width="50" height="50"
+                    viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="24.5" stroke="#787A7C" />
+                    <path d="M21 32L29 25L21 18" stroke="#787A7C" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section section__contacts pp-scrollable">
+        <div class="section-main contact js-section" id="contact">
+          <div class="container-main contacts__container">
+            <div class="contacts__row">
+              <div class="contacts__column">
+                <div class="contacts__work">
+                  <div class="contacts__work-text manrope-text2" style="padding-top: 200px;">True security requires
+                    understanding both the builder’s logic and the breaker’s mindset. With a background spanning
+                    full-stack development and advanced adversary emulation, I don't just identify vulnerabilities; I
+                    eliminate them at the source. From conducting deep-dive penetration tests to architecting
+                    high-performance, secure backend systems, I offer end-to-end solutions. Don't wait for a breach to
+                    validate your defenses. Contact me today, and let's engineer a system that stands the test of time.
+                  </div>
+                  <div class="contacts__button-wrapper"><a class="contacts__button" href="mailto:hamzaefesahinbas@proton.me"><svg width="200"
+                        height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      </svg>
+                    </a></div>
+                </div>
+              </div>
+              <div class="contacts__column">
+                <div class="contacts__title neue-headline2-green">how to reach me</div>
+                <div class="contacts__inner">
+                  <div class="contacts__wrapper">
+                    <div class="contacts__contacts">
+                      <div class="contacts__contact">
+                        <div class="contacts__contact-title manrope-text2">Address</div>
+                        <div class="contacts__contact-item contacts__adress neue-headline3">Remote</div>
+                      </div>
+                      <div class="contacts__contact">
+                        <div class="contacts__contact-title manrope-text2">Email</div><a
+                          class="contacts__contact-item contacts__mail neue-headline3"
+                          href="mailto:hamzaefesahinbas@proton.me">hamzaefesahinbas@proton.me</a>
+                      </div>
+                    </div>
+                    <ul class="contacts__follow">
+                      <li class="contacts__contact-title">
+                        <div class="manrope-text2">Follow me</div>
+                      </li>
+                      <li class="contacts__follow-link-wrapper"><a class="contacts__follow-link neue-headline3"
+                          href="https://www.linkedin.com/in/efe-sahinbas/">Linkedin</a></li>
+                      <li class="contacts__follow-link-wrapper"><a class="contacts__follow-link neue-headline3"
+                          href="https://www.github.com/MacallanTheRoot">Github</a></li>
+                      <li class="contacts__follow-link-wrapper"><a class="contacts__follow-link neue-headline3"
+                          href="https://www.instagram.com/h.efesahinbas/">Instagram</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Initialize Typed.js for ticker animation
+    if (document.querySelector('.home-ticker__text.typed')) {
+      new Typed('.home-ticker__text.typed', {
+        stringsElement: '.typed-strings',
+        typeSpeed: 80,
+        backSpeed: 40,
+        backDelay: 2000,
+        startDelay: 500,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+      });
+    }
+  </script>
+  <script>
+    document.addEventListener('click', function(e) {
+      const isKeyword = e.target.closest('.interactive-keyword');
+      if (isKeyword) {
+        if(e.target.tagName !== 'A') {
+          e.preventDefault();
+        }
+        isKeyword.classList.toggle('active');
+        document.querySelectorAll('.interactive-keyword').forEach(k => {
+          if(k !== isKeyword) k.classList.remove('active');
+        });
+      } else {
+        document.querySelectorAll('.interactive-keyword').forEach(k => k.classList.remove('active'));
+      }
+    });
+  </script>
+  <style>
+    @keyframes terminal-blink-cursor {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #a855f7; }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Sadece ana başlıkları (kısa metinleri) seçerek kayma/kırılma sorununu önlüyoruz
+      const typeElements = document.querySelectorAll('.neue-headline2-green');
+      
+      typeElements.forEach(el => {
+        const text = el.innerText.trim();
+        el.setAttribute('data-original-text', text);
+        el.dataset.typing = 'false';
+        
+        // Düzeni (layout) bozmamak için görünmez orijinal metni arkada tutuyoruz, 
+        // üstüne mutlak (absolute) konumlandırılmış yazan metni koyuyoruz.
+        el.innerHTML = `
+          <span style="position: relative; display: inline-block;">
+            <span style="visibility: hidden;">${text}</span>
+            <span class="terminal-typed-text" style="position: absolute; top: 0; left: 0; white-space: nowrap; border-right: 3px solid #a855f7; animation: terminal-blink-cursor 0.8s step-end infinite; overflow: hidden; max-width: 100%;"></span>
+          </span>
+        `;
+      });
+
+      function checkActiveSections() {
+        typeElements.forEach(el => {
+          const section = el.closest('.section');
+          // Eğer bölüm ekranda aktifse ve daha önce yazılmadıysa yazdır
+          if (section && section.classList.contains('active')) {
+            if (el.dataset.typing === 'false') {
+              el.dataset.typing = 'true'; // Bir daha yazmasın diye kilitliyoruz
+              const typedTextSpan = el.querySelector('.terminal-typed-text');
+              const text = el.getAttribute('data-original-text');
+              
+              let i = 0;
+              function typeWriter() {
+                if (i < text.length) {
+                  typedTextSpan.innerHTML += text.charAt(i);
+                  i++;
+                  setTimeout(typeWriter, Math.random() * 20 + 30);
+                } else {
+                  el.dataset.typing = 'done';
+                }
+              }
+              setTimeout(typeWriter, 400); // Ekrana geldikten yarım saniye sonra başlasın
+            }
+          }
+        });
+      }
+
+      // Sayfa yüklenince ilk kontrol
+      setTimeout(checkActiveSections, 300);
+
+      // Sayfa kaydırma animasyonunu (pagepiling 'active' class) izleyen gözlemci
+      const pp = document.getElementById('pagepiling');
+      if (pp) {
+        const observer = new MutationObserver(checkActiveSections);
+        observer.observe(pp, { attributes: true, subtree: true, attributeFilter: ['class'] });
+      }
+    });
+  </script>
+</body>
+ 
+</html>
